@@ -1,0 +1,11 @@
+<!-- app/views/users/index.html.erb -->
+
+<h1>Users List</h1>
+
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <%= link_to user.name, compare_films_path(usernames: user.username) %>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,16 @@
+<!-- app/views/films/compare_index.html.erb -->
+
+<h1>Compare Users</h1>
+
+<%= form_tag(compare_films_path, method: :get) do %>
+  <div class="user-list">
+    <% User.all.each do |user| %>
+      <label>
+        <%= check_box_tag "usernames[]", user.username %>
+        <%= link_to user.username, user_path(user) %>
+      </label>
+    <% end %>
+  </div>
+
+  <%= submit_tag 'Compare', class: 'compare-button' %>
+<% end %>

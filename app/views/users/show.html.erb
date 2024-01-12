@@ -1,0 +1,10 @@
+<!-- app/views/users/show.html.erb -->
+
+<h1><%= @user.name %></h1>
+<p>Email: <%= @user.email %></p>
+<p>Username: <%= @user.username %></p>
+
+<%= link_to 'View Films', user_films_path(@user) %>
+<%= link_to 'Compare with Other Users', compare_users_films_path(usernames: [@user.username, 'user2', 'user3'].join(',')) %>
+
+

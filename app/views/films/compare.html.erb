@@ -1,0 +1,25 @@
+<!-- app/views/films/compare.html.erb -->
+
+<h1>Compare Film Lists</h1>
+
+<div class="comparison">
+  <% @users.each do |user| %>
+    <div class="user-container">
+      <h2><%= user.name %>'s Film List</h2>
+      <div class="user-films">
+        <% @all_films.each do |film| %>
+          <p style="<%= styling_for_user_film(user, film) %>">
+            <%= film.title %>
+          </p>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="unseen-films">
+  <h2>Unseen Films</h2>
+  <% @unseen_films.each do |film| %>
+    <p><%= film.title %></p>
+  <% end %>
+</div>

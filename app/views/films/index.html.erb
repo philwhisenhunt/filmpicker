@@ -1,0 +1,50 @@
+<!-- app/views/films/index.html.erb -->
+
+<style>
+  ul {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Center the buttons */
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  .film-button {
+    display: inline-block;
+    padding: 15px 20px; /* Increased padding for slightly bigger buttons */
+    background-color: #3498db; /* Light blue color, you can change it */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 50px;
+  }
+
+  @media (max-width: 767px) {
+    .film-button {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1000px) {
+    .film-button {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  }
+</style>
+
+<h1>All Films</h1>
+
+<ul>
+  <% @all_films.each do |film| %>
+    <li>
+      <%= link_to "#{film.title} (#{film.release_date.year})", film_path(film), class: 'film-button' %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'New Film', new_film_path, class: 'film-button' %>
