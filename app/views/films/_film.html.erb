@@ -1,6 +1,6 @@
-<div style="background: lightgrey; width: 300px; padding: 10px;">
-  <%= film.title %>
-  <br>
-  <%= link_to :edit, edit_film_path(film) %>
-</div>
-<br>
+
+<li>
+  <%= link_to "#{film.title} (#{film.release_date.year})", film_path(film), class: 'film-button' %>
+</li>
+
+

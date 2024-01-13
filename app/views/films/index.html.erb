@@ -41,9 +41,9 @@
 <h1>All Films</h1>
 
 <%= turbo_stream_from :films %>
-
+<ul>
 <%= turbo_frame_tag :films do %>
   <%= render @all_films %>
 <% end %>
-
+</ul>
 <%= link_to 'New Film', new_film_path, class: 'film-button' %>
