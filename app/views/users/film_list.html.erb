@@ -1,0 +1,54 @@
+<!-- app/views/users/film_list.html.erb -->
+
+<style>
+  ul {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Center the buttons */
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  .film-button {
+    display: inline-block;
+    width: 400px; /* Fixed width for all buttons */
+    padding: 15px 20px; /* Adjust padding as needed */
+    color: #000; /* Set text color */
+    border-radius: 5px;
+    font-size: 24px; /* Adjust font size as needed */
+    text-decoration: none;
+    background-color: #248ffd; /* Default background color for not seen movies */
+  }
+
+  .film-button.film-seen {
+    background-color: #c5ddf7; /* Light yellow background color for seen movies */
+    color: #9f9f9f; /* Set text color */
+  }
+
+  @media (max-width: 767px) {
+    .film-button {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1000px) {
+    .film-button {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  }
+</style>
+
+<h1>Film List for <%= @user.name %></h1>
+
+<ul>
+  <% @all_films.each do |film| %>
+    <li>
+      <%= link_to "#{film.title} (#{film.release_date.year})", film_path(film), class: "film-button #{'film-seen' if @user.seen?(film)}" %>
+    </li>
+  <% end %>
+</ul>

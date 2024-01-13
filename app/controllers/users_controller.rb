@@ -13,5 +13,10 @@ class UsersController < ApplicationController
         params.require(:user).permit(:name, :email, :password, :password_confirmation, :username)
     end
       
+
+    def film_list
+      @user = User.find(params[:id])
+      @all_films = Film.all
+    end
   end
   

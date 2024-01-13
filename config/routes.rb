@@ -10,6 +10,11 @@ Rails.application.routes.draw do
 
   resources :users do
     get 'films', to: 'films#user_films', on: :member
+   
+    member do
+      get 'film_list', to: 'users#film_list'
+    end
+   
   end
 
   get 'films/compare/:usernames', to: 'films#compare', as: 'compare_films'
