@@ -31,18 +31,18 @@ class ViewingsController < ApplicationController
       respond_to do |format|
         format.turbo_stream do
           render turbo_stream: [
-            turbo_stream.replace(dom_id(@viewing), partial: 'viewings/viewing', locals: { viewing: @viewing }),
-            turbo_stream.remove(dom_id(@film)),
+            turbo_stream.remove((@film)),
             turbo_stream.append('film-list', partial: 'films/film', locals: { film: @film, user: @user })
           ]
         end
         format.html { redirect_to film_list_path } # Adjust the redirect path if needed
+        format.json { render json: { status: 'success' } } # Add this line
       end
     else
       # Handle errors if saving fails
       # ...
     end
-  end
+  end  
   
 end
 
