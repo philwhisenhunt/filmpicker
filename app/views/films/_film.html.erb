@@ -1,17 +1,15 @@
 <% if @user.present? %>
-<li>
-  <div class="film-button <%= 'film-seen' if @user.seen?(film) %>"
-      data-controller="viewings"
-      data-action="click->viewings#createAndView"
-      data-url="<%= create_or_update_viewings_path(film_id: film.id, user_id: @user.id) %>">
+  <li>
+    <div id="<%= "film_#{film.id}" %>" class="film-button <%= 'film-seen' if @user.seen?(film) %>"
+         data-controller="viewings"
+         data-action="click->viewings#createAndView"
+         data-url="<%= create_or_update_viewings_path(film_id: film.id, user_id: @user.id) %>"
+         data-film-id="<%= film.id %>">
       <%= "#{film.title} (#{film.release_date.year})" %>
-  </div>
-</li>
+    </div>
+  </li>
 <% else %>
   <li>
     <%= link_to "#{film.title} (#{film.release_date.year})", film_path(film), class: 'film-button' %>
   </li>
 <% end %>
-
-
-
