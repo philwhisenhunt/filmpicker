@@ -48,7 +48,9 @@
 <ul>
   <% @all_films.each do |film| %>
     <li>
-      <%= link_to "#{film.title} (#{film.release_date.year})", film_path(film), class: "film-button #{'film-seen' if @user.seen?(film)}" %>
+      <div class="film-button <%= 'film-seen' if @user.seen?(film) %>">
+        <%= "#{film.title} (#{film.release_date.year})" %>
+      </div>
     </li>
   <% end %>
 </ul>
