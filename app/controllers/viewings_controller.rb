@@ -1,4 +1,5 @@
 class ViewingsController < ApplicationController
+  include ActionView::RecordIdentifier
     def create
         respond_to do |format|
           format.html { redirect_to film_list_user_path(@user), notice: 'Movie marked as viewed.' }
@@ -29,12 +30,7 @@ class ViewingsController < ApplicationController
     # Save the viewing
     if @viewing.save
       respond_to do |format|
-        format.turbo_stream do
-          render turbo_stream: [
-            turbo_stream.remove((@film)),
-            turbo_stream.append('film-list', partial: 'films/film', locals: { film: @film, user: @user })
-          ]
-        end
+        format.turbo_stream 
         format.html { redirect_to film_list_path } # Adjust the redirect path if needed
         format.json { render json: { status: 'success' } } # Add this line
       end
@@ -42,7 +38,7 @@ class ViewingsController < ApplicationController
       # Handle errors if saving fails
       # ...
     end
-  end  
+  end
   
 end
 

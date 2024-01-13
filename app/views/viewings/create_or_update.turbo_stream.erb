@@ -1,3 +1,1 @@
-# create_or_update.turbo_stream.erb
-
-<%= turbo_stream.append :films, partial: 'films/film', locals: { film: @film, user: @user } %>
+<%= turbo_stream.replace :films, partial: 'films/film', locals: { film: @film, user: @user } %>
