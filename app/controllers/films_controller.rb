@@ -7,7 +7,7 @@ class FilmsController < ApplicationController
     if params[:user_id].present?
       @user = User.find(params[:user_id])
     end
-    @all_films = Film.all
+    @all_films = Film.all.order(created_at: :desc)
   end
   
   def compare

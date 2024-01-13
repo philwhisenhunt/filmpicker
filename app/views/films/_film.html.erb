@@ -1,5 +1,6 @@
-<!-- app/views/films/_film.html.erb -->
-
-<turbo-stream action="append" target="film-list">
-  <%= render partial: 'films/film', locals: { film: film, user: user } %>
-</turbo-stream>
+<div style="background: lightgrey; width: 300px; padding: 10px;">
+  <%= film.title %>
+  <br>
+  <%= link_to :edit, edit_film_path(film) %>
+</div>
+<br>
