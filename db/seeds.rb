@@ -1,14 +1,3 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
-
-
 # db/seeds.rb
 
 # Create Users
@@ -18,14 +7,31 @@ users = []
   users << User.create(name: "User #{i + 1}", email: "#{username}@example.com", username: username)
 end
 
+# List of movies with titles and release years
+movies_list = [
+  { title: "The Shawshank Redemption", release_year: 1994 },
+  { title: "The Godfather", release_year: 1972 },
+  { title: "The Dark Knight", release_year: 2008 },
+  { title: "The Godfather Part II", release_year: 1974 },
+  { title: "12 Angry Men", release_year: 1957 },
+  { title: "Schindler's List", release_year: 1993 },
+  { title: "The Lord of the Rings: The Return of the King", release_year: 2003 },
+  { title: "Pulp Fiction", release_year: 1994 },
+  { title: "The Lord of the Rings: The Fellowship of the Ring", release_year: 2001 },
+  { title: "The Good, the Bad and the Ugly", release_year: 1966 },
+  { title: "Forrest Gump", release_year: 1994 },
+  { title: "Fight Club", release_year: 1999 },
+  { title: "The Lord of the Rings: The Two Towers", release_year: 2002 },
+  { title: "Inception", release_year: 2010 },
+  { title: "Star Wars: Episode V - The Empire Strikes Back", release_year: 1980 }
+]
+
 # Create Films
 films = []
-10.times do |i|
-  random_year = rand(1926..2024)
+movies_list.each do |movie|
   films << Film.create(
-    title: "Film #{i + 1}",
-    director: "Director #{i + 1}",
-    release_date: Date.new(random_year, 1, 1) + i.days
+    title: movie[:title],
+    release_date: Date.new(movie[:release_year], 1, 1)
   )
 end
 
@@ -37,3 +43,5 @@ films.each do |film|
     Viewing.create(user: user, film: film)
   end
 end
+
+
