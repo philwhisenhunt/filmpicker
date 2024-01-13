@@ -45,14 +45,9 @@
 
 <h1>Film List for <%= @user.name %></h1>
 
-<ul id="film-list">
-  <% @all_films.each do |film| %>
-    <li>
-      <div class="film-button <%= 'film-seen' if @user.seen?(film) %>"
-           data-action="click->viewings#create_or_update"
-           data-url="<%= create_or_update_viewings_path(film_id: film.id, user_id: @user.id) %>">
-        <%= "#{film.title} (#{film.release_date.year})" %>
-      </div>
-    </li>
+<%= turbo_stream_from :films %>
+<ul>
+  <%= turbo_frame_tag :films do %>
+    <%= render @all_films %>
   <% end %>
 </ul>
