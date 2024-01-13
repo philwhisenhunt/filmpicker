@@ -1,11 +1,6 @@
 import { Controller } from "@hotwired/stimulus";
 export default class extends Controller {
 
-    connect() {
-        console.log("Controller connected!");
-    }
-
-
     createAndView() {
         console.log("Clicky")
         const url = this.element.dataset.url;
