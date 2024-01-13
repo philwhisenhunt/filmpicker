@@ -17,6 +17,11 @@ class UsersController < ApplicationController
     def film_list
       @user = User.find(params[:id])
       @all_films = Film.all
+
+      respond_to do |format|
+        format.html # Render HTML view
+        format.turbo_stream # Respond to Turbo Streams
+      end
     end
   end
   

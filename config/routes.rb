@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'viewings/create'
+  get 'viewings/update'
   get 'films/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
