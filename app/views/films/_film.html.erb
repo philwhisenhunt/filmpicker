@@ -1,0 +1,5 @@
+<!-- app/views/films/_film.html.erb -->
+
+<turbo-stream action="append" target="film-list">
+  <%= render partial: 'films/film', locals: { film: film, user: user } %>
+</turbo-stream>

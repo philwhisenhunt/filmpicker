@@ -25,5 +25,10 @@ Rails.application.routes.draw do
     get 'compare/:usernames', to: 'films#compare', on: :collection, as: 'compare_users'
   end
 
+  resources :viewings do
+    collection do
+      post 'create_or_update'
+    end
+  end
 
 end
