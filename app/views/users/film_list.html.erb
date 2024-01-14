@@ -13,19 +13,20 @@
 
   .film-button {
     display: inline-block;
-    width: 400px; /* Fixed width for all buttons */
-    padding: 15px 20px; /* Adjust padding as needed */
-    color: #000; /* Set text color */
+    width: 400px; 
+    padding: 15px 20px; 
+    color: #000;
     border-radius: 5px;
-    font-size: 24px; /* Adjust font size as needed */
+    font-size: 24px; 
     text-decoration: none;
-    background-color: #248ffd; /* Default background color for not seen movies */
+    background-color: #248ffd; 
   }
 
-  .film-button.film-seen {
-    background-color: #c5ddf7; /* Light yellow background color for seen movies */
-    color: #9f9f9f; /* Set text color */
-  }
+.film-button.film-seen {
+  background-color: #c5ddf7; 
+  color: #9f9f9f; 
+  text-decoration: line-through; 
+}
 
   @media (max-width: 767px) {
     .film-button {
