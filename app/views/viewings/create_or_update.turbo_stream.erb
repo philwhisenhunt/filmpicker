@@ -1,1 +1,1 @@
-<%= turbo_stream.replace :film, partial: 'films/film', locals: { film: @film, user: @user } %>
+<%= turbo_stream.replace "film_#{@film.id}", partial: 'films/film', locals: { film: @film, user: @user } %>
