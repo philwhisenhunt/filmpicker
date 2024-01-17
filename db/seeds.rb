@@ -8,7 +8,7 @@ users = []
 end
 
 # List of movies with titles and release years
-movies_list = [
+long_movies_list = [
     { "title": "The Shawshank Redemption", "release_year": 1994 },
     { "title": "The Godfather", "release_year": 1972 },
     { "title": "The Dark Knight", "release_year": 2008 },
@@ -171,6 +171,39 @@ movies_list = [
     { "title": "Prisoners", "release_year": 2013 },
   ]
   
+
+  movies_list = [
+    { "title": "The Shawshank Redemption", "release_year": 1994 },
+    { "title": "The Godfather", "release_year": 1972 },
+    { "title": "The Dark Knight", "release_year": 2008 },
+    { "title": "The Godfather Part II", "release_year": 1974 },
+    { "title": "12 Angry Men", "release_year": 1957 },
+    { "title": "Schindler's List", "release_year": 1993 },
+    { "title": "The Lord of the Rings: The Return of the King", "release_year": 2003 },
+    { "title": "Pulp Fiction", "release_year": 1994 },
+    { "title": "The Lord of the Rings: The Fellowship of the Ring", "release_year": 2001 },
+    { "title": "The Good, the Bad and the Ugly", "release_year": 1966 },
+    { "title": "Forrest Gump", "release_year": 1994 },
+    { "title": "Fight Club", "release_year": 1999 },
+    { "title": "The Lord of the Rings: The Two Towers", "release_year": 2002 },
+    { "title": "Inception", "release_year": 2010 },
+    { "title": "Star Wars: Episode V - The Empire Strikes Back", "release_year": 1980 },
+    { "title": "The Matrix", "release_year": 1999 },
+    { "title": "Goodfellas", "release_year": 1990 },
+    { "title": "One Flew Over the Cuckoo's Nest", "release_year": 1975 },
+    { "title": "Se7en", "release_year": 1995 },
+    { "title": "It's a Wonderful Life", "release_year": 1946 },
+    { "title": "Seven Samurai", "release_year": 1954 },
+    { "title": "Interstellar", "release_year": 2014 },
+    { "title": "The Silence of the Lambs", "release_year": 1991 },
+    { "title": "Saving Private Ryan", "release_year": 1998 },
+    { "title": "City of God", "release_year": 2002 },
+    { "title": "Life Is Beautiful", "release_year": 1997 },
+    { "title": "The Green Mile", "release_year": 1999 },
+    { "title": "Star Wars: Episode IV - A New Hope", "release_year": 1977 },
+    { "title": "Terminator 2: Judgment Day", "release_year": 1991 },
+    { "title": "Spider-Man: Across the Spider-Verse", "release_year": 2023 }
+  ]
 
 # Create Films
 films = []
