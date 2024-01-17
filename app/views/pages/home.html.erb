@@ -38,5 +38,5 @@
 <ul>
   <li><%= link_to 'View Films', films_path, class: 'button' %></li>
   <li><%= link_to 'View Users', users_path, class: 'button' %></li>
-  <li><%= link_to 'Example Comparison', compare_films_path(usernames: 'user1,user2,user3'), class: 'button' %></li>
+  <li><%= link_to 'Example Comparison', compare_films_path(usernames: @usernames_string), class: 'button' %></li>
 </ul>

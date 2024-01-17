@@ -1,10 +1,29 @@
 # db/seeds.rb
 
 # Create Users
-users = []
-5.times do |i|
-  username = "user#{i + 1}"
-  users << User.create(name: "User #{i + 1}", email: "#{username}@example.com", username: username)
+# users = []
+# 5.times do |i|
+#   username = "user#{i + 1}"
+#   users << User.create(name: "User #{i + 1}", email: "#{username}@example.com", username: username)
+# end
+
+users_data = [
+  { name: "Tim Ca", email: "tim@example.com" },
+  { name: "Michael Fe", email: "michael@example.com" },
+  { name: "Alex How", email: "alex@example.com" },
+  { name: "Phil W", email: "phil@example.com" },
+  { name: "Kyle B", email: "kyle@example.com" }
+]
+
+users_data.each do |user_data|
+  first_name, last_name = user_data[:name].split(' ')
+  username = "#{first_name.downcase}#{last_name[0].downcase}"
+
+  User.create!(
+    name: user_data[:name],
+    email: user_data[:email],
+    username: username
+  )
 end
 
 # List of movies with titles and release years
