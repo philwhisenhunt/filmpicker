@@ -38,3 +38,46 @@ footer {
     padding: 10px;
     background-color: #ffffff;
 }
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    /* Center the buttons */
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.film-button {
+    display: inline-block;
+    width: 400px;
+    padding: 15px 20px;
+    color: #000;
+    border-radius: 5px;
+    font-size: 24px;
+    text-decoration: none;
+    background-color: #248ffd;
+}
+
+.film-button.film-seen {
+    background-color: #c5ddf7;
+    color: #9f9f9f;
+    text-decoration: line-through;
+}
+
+@media (max-width: 767px) {
+    .film-button {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+    .film-button {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
