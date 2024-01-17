@@ -1,4 +1,4 @@
 class Viewing < ApplicationRecord
-  belongs_to :user
-  belongs_to :film
+  belongs_to :user, dependent: :destroy
+  belongs_to :film, dependent: :destroy
 end
