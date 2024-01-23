@@ -49,7 +49,7 @@ class FilmsController < ApplicationController
 
   def styling_for_user_film(user, film)
     if @unseen_films.include?(film)
-      'background-color: green;'
+      'background-color: #fffde03d;'
     elsif @films_seen_by_users[user.id].include?(film.id)
       'text-decoration: line-through;'
     else
