@@ -1,6 +1,13 @@
 <!-- app/views/films/compare.html.erb -->
 
-<h1>Compare Film Lists</h1>
+<h2>Compare Film Lists</h2>
+
+<div class="unseen-films">
+  <h3>Films all users haven't seen</h3>
+  <% @unseen_films.each do |film| %>
+    <p><%= film.title %></p>
+  <% end %>
+</div>
 
 <div class="comparison">
   <% @users.each do |user| %>
@@ -17,9 +24,3 @@
   <% end %>
 </div>
 
-<div class="unseen-films">
-  <h2>Unseen Films</h2>
-  <% @unseen_films.each do |film| %>
-    <p><%= film.title %></p>
-  <% end %>
-</div>
