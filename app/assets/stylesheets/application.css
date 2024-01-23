@@ -36,16 +36,16 @@ li {
     display: inline-block;
     width: 400px;
     padding: 15px 20px;
-    color: #000;
+    color: #fff;
     border-radius: 5px;
     font-size: 24px;
     text-decoration: none;
-    background-color: #248ffd;
+    background-color: #172f47;
 }
 
 .film-button.film-seen {
-    background-color: #c5ddf7;
-    color: #9f9f9f;
+    background-color: #ffffff82;
+    color: #fff;
     text-decoration: line-through;
 }
 
@@ -83,7 +83,7 @@ li {
     display: inline-block;
     width: 400px;
     padding: 15px 20px;
-    color: #000;
+    color: #fff;
     border-radius: 5px;
     font-size: 24px;
     text-decoration: none;
@@ -102,7 +102,7 @@ body {
 header {
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #fff;
+    border: 2px solid #fff;
     max-width: 90%;
     margin: 0 auto;
 }
@@ -117,9 +117,7 @@ header h1 {
     text-decoration: none;
 }
 
-.header-link:hover {
-    color: #0056b3;
-}
+
 
 h1 {
     font-size: 5em;
@@ -140,7 +138,7 @@ h3 {
     display: inline-block;
     width: 400px;
     padding: 15px 20px;
-    color: #000;
+    color: #fff;
     border-radius: 5px;
     font-size: 24px;
     text-decoration: none;
