@@ -62,12 +62,22 @@ li {
         width: 100%;
         box-sizing: border-box;
     }
+
+    header h1 {
+        font-size: 1em;
+        /* Set a smaller font size for screens up to 767px wide */
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1000px) {
     .film-button {
         max-width: 1000px;
         margin: 0 auto;
+    }
+
+    header h1 {
+        font-size: 1em;
+        /* Set a smaller font size for screens up to 767px wide */
     }
 }
 
