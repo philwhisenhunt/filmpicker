@@ -1,19 +1,3 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
 .comparison {
     display: flex;
     justify-content: space-between;
@@ -42,7 +26,6 @@ ul {
     list-style: none;
     padding: 0;
     text-align: center;
-    /* Center the buttons */
 }
 
 li {
@@ -81,92 +64,56 @@ li {
     }
 }
 
-.users-list {
-
-    /* Style the heading within users-list class */
-    h1 {
-        color: #333;
-        /* Set heading text color */
-        font-family: 'Arial', sans-serif;
-        /* Set heading font family */
-        text-align: center;
-        /* Center-align the heading */
-    }
-
-    /* Style the list within users-list class */
-    ul {
-        list-style-type: none;
-        /* Remove default list bullets */
-        padding: 0;
-        /* Remove default padding */
-    }
-
-    /* Style the list items within users-list class */
-    li {
-        margin-bottom: 10px;
-        /* Add space between list items */
-    }
-
-    /* Style the links within users-list class */
-    a {
-        color: #007bff;
-        /* Set link color */
-        text-decoration: none;
-        /* Remove underline */
-    }
-
-    /* Change link color on hover within users-list class */
-    a:hover {
-        color: #0056b3;
-        /* Set hover color */
-    }
+.users-list h1 {
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
 }
 
-/* Set background color to blue for the entire project */
+.users-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.users-list li {
+    margin-bottom: 10px;
+}
+
+.users-list a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.users-list a:hover {
+    color: #0056b3;
+}
+
 body {
     background-color: #007bff;
     color: #fff;
-    /* Set text color to white for better contrast */
 }
 
-/* Style the header */
 header {
-
-
     padding: 20px;
-
     text-align: center;
-
     border-bottom: 2px solid #fff;
-
     max-width: 90%;
     margin: 0 auto;
 }
 
-/* Style the Film Finder heading in the header */
 header h1 {
     font-size: 10em;
-    /* Set font size for the heading */
     margin-bottom: 10px;
-
-    /* Add space between the heading and other content */
 }
 
-/* Add this class to your header link_to to maintain styles */
 .header-link {
     color: #fff;
-    /* Set link color to white */
     text-decoration: none;
-    /* Remove underline */
 }
 
-/* Change link color on hover */
 .header-link:hover {
     color: #0056b3;
-    /* Set hover color */
 }
-
-
 
 h1 {
     font-size: 5em;
