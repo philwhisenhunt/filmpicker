@@ -80,7 +80,8 @@ li {
 }
 
 .users-list a {
-    color: #007bff;
+    color: #fff;
+    /* Change text color to white */
     text-decoration: none;
 }
 
