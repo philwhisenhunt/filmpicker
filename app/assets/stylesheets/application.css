@@ -7,6 +7,10 @@
     margin-right: 20px;
 }
 
+.unseen-films {
+    margin: 0 auto;
+}
+
 body {
     display: flex;
     flex-direction: column;
