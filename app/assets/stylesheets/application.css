@@ -81,3 +81,44 @@ li {
         margin: 0 auto;
     }
 }
+
+.users-list {
+
+    /* Style the heading within users-list class */
+    h1 {
+        color: #333;
+        /* Set heading text color */
+        font-family: 'Arial', sans-serif;
+        /* Set heading font family */
+        text-align: center;
+        /* Center-align the heading */
+    }
+
+    /* Style the list within users-list class */
+    ul {
+        list-style-type: none;
+        /* Remove default list bullets */
+        padding: 0;
+        /* Remove default padding */
+    }
+
+    /* Style the list items within users-list class */
+    li {
+        margin-bottom: 10px;
+        /* Add space between list items */
+    }
+
+    /* Style the links within users-list class */
+    a {
+        color: #007bff;
+        /* Set link color */
+        text-decoration: none;
+        /* Remove underline */
+    }
+
+    /* Change link color on hover within users-list class */
+    a:hover {
+        color: #0056b3;
+        /* Set hover color */
+    }
+}

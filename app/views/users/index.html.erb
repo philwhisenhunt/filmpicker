@@ -4,8 +4,10 @@
 
 <ul>
   <% @users.each do |user| %>
+  <div class="users-list">
     <li>
       <%= link_to user.name, film_list_user_path(user) %>
     </li>
+  </div>
   <% end %>
 </ul>
