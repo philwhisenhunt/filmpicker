@@ -15,9 +15,11 @@
 }
 
 body {
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
 }
 
 main {
@@ -27,6 +29,7 @@ main {
 footer {
     text-align: center;
     padding: 10px;
+    color: #ffffff21
 }
 
 ul {
@@ -63,10 +66,7 @@ li {
         box-sizing: border-box;
     }
 
-    header h1 {
-        font-size: 1em;
-        /* Set a smaller font size for screens up to 767px wide */
-    }
+
 }
 
 @media (min-width: 768px) and (max-width: 1000px) {
@@ -75,10 +75,7 @@ li {
         margin: 0 auto;
     }
 
-    header h1 {
-        font-size: 1em;
-        /* Set a smaller font size for screens up to 767px wide */
-    }
+
 }
 
 .users-list h1 {
@@ -98,7 +95,7 @@ li {
 
 .users-list a {
     display: inline-block;
-    width: 400px;
+    width: 90%;
     padding: 15px 20px;
     color: #fff;
     border-radius: 5px;
@@ -116,18 +113,9 @@ body {
     color: #fff;
 }
 
-header {
-    padding: 20px;
-    text-align: center;
-    border: 2px solid #fff;
-    max-width: 90%;
-    margin: 0 auto;
-}
 
-header h1 {
-    font-size: 10em;
-    margin-bottom: 10px;
-}
+
+
 
 
 header h2 {
@@ -141,6 +129,7 @@ header h2 {
 .header-link {
     color: #fff;
     text-decoration: none;
+
 }
 
 
