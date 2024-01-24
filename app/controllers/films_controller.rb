@@ -40,7 +40,8 @@ class FilmsController < ApplicationController
 
 
   def user_films
-    @user = User.find(params[:user_id])
+    debugger
+    @user = User.find(params[:id])
     @all_films = Film.all
   end
 
