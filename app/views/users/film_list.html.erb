@@ -4,7 +4,7 @@
 
 </style>
 
-<h3>Film List for <%= @user.name %></h3>
+<h3>Film List for <%= link_to @user.username, user_path(@user) %> (<%= @user.name%>)</h3>
 
 <%= turbo_stream_from :films %>
 <ul>

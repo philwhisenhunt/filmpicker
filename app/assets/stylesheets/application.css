@@ -148,6 +148,11 @@ h3 {
     text-align: center;
 }
 
+h3 a {
+    text-align: center;
+    color: #fff;
+}
+
 .homepage a {
     display: inline-block;
     width: 400px;
