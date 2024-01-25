@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    has_many :viewings
+    has_many :viewings, dependent: :destroy
     has_many :films, through: :viewings
     validates :username, uniqueness: true
 

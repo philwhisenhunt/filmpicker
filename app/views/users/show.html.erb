@@ -7,4 +7,6 @@
 <%= link_to 'View Films', film_list_user_path(@user) %>
 <%= link_to 'Compare with Other Users', compare_users_films_path(usernames: [@user.username, User.first.username, User.second.username].join(',')) %>
 
+<hr>
+<%= button_to 'Reset Viewings', user_reset_viewings_path(@user), method: :post %>
 

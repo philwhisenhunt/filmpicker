@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :users do
     get 'films', to: 'films#user_films', on: :member
-   
+    post 'reset_viewings', to: 'users#reset_viewings'
     member do
       get 'film_list', to: 'users#film_list'
     end

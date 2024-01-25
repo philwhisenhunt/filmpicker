@@ -42,5 +42,15 @@ class UsersController < ApplicationController
         format.turbo_stream # Respond to Turbo Streams
       end
     end
+
+    def reset_viewings
+    
+      @user = User.find(params[:user_id])
+      viewings = Viewing.where(user: @user)
+      # debugger
+      viewings.each do |viewing|
+        viewing.destroy
+      end
+    end
   end
   
