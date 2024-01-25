@@ -12,6 +12,8 @@
 
 .unseen-films {
     margin: 0 auto;
+    text-align: left;
+    width: 30%;
 }
 
 body {
