@@ -11,10 +11,16 @@ class UsersController < ApplicationController
 
     def create
       @user = User.new(user_params)
+
+      unless @user.username.present?
+        first_name, last_name = user_params[:name].split(' ')
+        @user.username = "#{first_name.downcase}#{last_name[0].downcase}"
+      end
+
       if @user.save
         redirect_to @user, notice: 'User was successfully created.'
       else
-        render :new
+        render :new, notice: @user.errors.full_messages
       end
     end
   

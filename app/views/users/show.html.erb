@@ -5,6 +5,6 @@
 <p>Username: <%= @user.username %></p>
 
 <%= link_to 'View Films', film_list_user_path(@user) %>
-<%= link_to 'Compare with Other Users', compare_users_films_path(usernames: [@user.username, 'user2', 'user3'].join(',')) %>
+<%= link_to 'Compare with Other Users', compare_users_films_path(usernames: [@user.username, User.first.username, User.second.username].join(',')) %>
 
 
