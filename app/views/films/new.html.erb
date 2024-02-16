@@ -1,0 +1,38 @@
+
+<h1>New Film</h1>
+
+<div class="film-form">
+  <%= form_for @film do |f| %>
+    <div>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+
+    <div>
+      <%= f.label :director %>
+      <%= f.text_field :director %>
+    </div>
+
+    <div>
+      <%= f.label :release_date %>
+      <%= f.date_field :release_date %>
+    </div>
+
+
+    <div>
+      <%= f.submit "Create Film", class: "registerbtn" %>
+    </div>
+  <% end %>
+
+
+  <% if @film.errors.any? %>
+    <div>
+      <h2>Errors:</h2>
+      <ul>
+        <% @film.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>

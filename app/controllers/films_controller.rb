@@ -34,6 +34,16 @@ class FilmsController < ApplicationController
     # This action is used to render the compare_index view
   end
 
+  def create
+    @film = Film.new(film_params)
+    
+    if @film.save
+      redirect_to @film, notice: "Film was successfully created"
+    else
+      render :new, notice: @film.errors.full_messages
+    end
+  end
+
   def show
     @film = Film.find(params[:id])
   end
@@ -42,6 +52,14 @@ class FilmsController < ApplicationController
   def user_films
     @user = User.find(params[:id])
     @all_films = Film.all
+  end
+
+  def new
+    @film = Film.new
+  end
+
+  def film_params
+    params.require(:film).permit(:title, :director, :release_date)
   end
 
 
