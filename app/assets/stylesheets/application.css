@@ -6,8 +6,17 @@
 
 }
 
+.comparison-holder {
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+
 .user-films {
     margin-right: 20px;
+
 }
 
 .unseen-films {

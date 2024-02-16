@@ -7,18 +7,20 @@
   <% end %>
 </div>
 
-<div class="comparison">
-  <% @users.each do |user| %>
-    <div class="user-container">
-      <h2><%= user.name %>'s Film List</h2>
-      <div class="user-films">
-        <% @all_films.each do |film| %>
-          <p style="<%= styling_for_user_film(user, film) %>">
-            <%= film.title %>
-          </p>
-        <% end %>
+<div class="comparison-holder">
+  <div class="comparison">
+    <% @users.each do |user| %>
+      <div class="user-container">
+        <h2><%= user.name %>'s Film List</h2>
+        <div class="user-films">
+          <% @all_films.each do |film| %>
+            <p style="<%= styling_for_user_film(user, film) %>">
+              <%= film.title %>
+            </p>
+          <% end %>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
 
